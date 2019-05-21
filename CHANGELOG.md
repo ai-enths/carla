@@ -17,13 +17,16 @@
       - Wheels of vehicles are animated (steering, throttle, handbrake), also bikes and cycles
       - Walkers animation is simulated in playback (through speed of walker), so they walk properly.
   * Fixed Lidar effectiveness bug in manual_control.py
+  * Fixed dead-lock when loading a new map in synchronous mode
   * Added C++ client example using LibCarla
   * Updated OpenDriveActor to use the new Waypoint API
   * Fixed wrong units in VehiclePhysicsControl's center of mass
   * Several optimizations to the RPC server, now supports a bigger load of async messages
   * Exposed 'is_invincible' for pedestrians
+  * Added sidewalks and improved lane markings in `no_rendering_mode.py`
   * Physics:
     - Added Friction Trigger Boxes for simulating, for example, slippery surfaces in any region of the map defined by users.
+    - Fixed bugs related with vehicle and wheels physics parameters.
 
 ## CARLA 0.9.5
 
