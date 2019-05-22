@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "Carla/OpenDrive/OpenDriveMap.h"
+
 #include "Kismet/BlueprintFunctionLibrary.h"
 
 #include "OpenDrive.generated.h"
@@ -23,4 +25,10 @@ public:
   /// is not found.
   UFUNCTION(BlueprintCallable, Category="CARLA|OpenDrive")
   static FString LoadXODR(const FString &MapName);
+
+  UFUNCTION(BlueprintCallable, Category="CARLA|OpenDrive")
+  static UOpenDriveMap *LoadOpenDriveMap(const FString &MapName);
+
+  UFUNCTION(BlueprintPure, Category="CARLA|OpenDrive", meta=(WorldContext="WorldContextObject"))
+  static UOpenDriveMap *LoadCurrentOpenDriveMap(const UObject *WorldContextObject);
 };
