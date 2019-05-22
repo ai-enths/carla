@@ -1,7 +1,7 @@
 ## Latest
-
   * Upgraded to Unreal Engine 4.22
   * Recorder fixes:
+    - Fixed a possible crash if an actor is respawned before the episode is ready when a new map is loaded automatically.
     - Actors at start of playback could interpolate positions from its current position instead than the recorded position, making some fast sliding effect during 1 frame.
     - Camera following in playback was not working if a new map was needed to load.
     - API function 'show_recorder_file_info' was showing the wrong parent id.
@@ -24,6 +24,7 @@
   * Several optimizations to the RPC server, now supports a bigger load of async messages
   * Exposed 'is_invincible' for pedestrians
   * Added sidewalks and improved lane markings in `no_rendering_mode.py`
+  * Fixed bug related with Pygame error of surface too large, added sidewalks and improved lane markings in `no_rendering_mode.py`
   * Physics:
     - Added Friction Trigger Boxes for simulating, for example, slippery surfaces in any region of the map defined by users.
     - Fixed bugs related with vehicle and wheels physics parameters.
